@@ -10,23 +10,26 @@ const getListLocalStorage = () => {
 function renderList() {
   const lists = getListLocalStorage();
   shoppingList.innerHTML = "";
-  const removeAll = document.createElement("button");
-  removeAll.textContent = "Remove All";
 
-  removeAll.classList.add("removteALl");
+  if (lists.length !== 0) {
+    const removeAll = document.createElement("button");
+    removeAll.textContent = "Remove All";
 
-  removeAll.addEventListener("click", () => {
-    const confirmed = confirm("Are you sure you want to remove all lists?");
+    removeAll.classList.add("removteALl");
 
-    if (confirmed) {
-      localStorage.removeItem("inköps_list");
-      renderList();
-    } else {
-      return;
-    }
-  });
+    removeAll.addEventListener("click", () => {
+      const confirmed = confirm("Are you sure you want to remove all lists?");
 
-  shoppingList.appendChild(removeAll);
+      if (confirmed) {
+        localStorage.removeItem("inköps_list");
+        renderList();
+      } else {
+        return;
+      }
+    });
+
+    shoppingList.appendChild(removeAll);
+  }
 
   if (lists.length == 0) {
     const h4 = document.createElement("h4");
