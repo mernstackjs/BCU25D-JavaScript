@@ -44,6 +44,7 @@ function renderList() {
     p.textContent = item;
     delBtn.textContent = "Delete";
     delBtn.dataset.index = index;
+    delBtn.classList.add("delBtn");
     li.appendChild(p);
     li.appendChild(delBtn);
     shoppingList.appendChild(li);
