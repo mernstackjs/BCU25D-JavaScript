@@ -9,3 +9,81 @@ body {
   background-color: #f4f4f4;
   padding: 20px;
 }
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.19);
+  position: relative;
+}
+
+.input-section {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.input-section input {
+  width: 80%;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid cadetblue;
+}
+.input-section button {
+  width: 20%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: cadetblue;
+  font-size: 18px;
+  border-radius: 10px;
+  color: white;
+}
+
+#shopping-list {
+  margin-top: 14px;
+}
+
+#shopping-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px;
+}
+
+#shopping-list li:hover {
+  background-color: cadetblue;
+  color: white;
+}
+#shopping-list li button:hover {
+  cursor: pointer;
+}
+
+.removteALl {
+  background-color: red;
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.removteALl:hover {
+  background-color: rgb(164, 23, 23);
+}
+
+.alredy_warring {
+  background-color: rgb(181, 91, 91);
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: white;
+}
